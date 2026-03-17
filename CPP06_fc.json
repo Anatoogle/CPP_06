@@ -1,0 +1,352 @@
+{
+  "groups": [
+    {
+      "id": "t777zw1adwammo0kltd",
+      "name": "CPP 06",
+      "desc": "cpp module 06",
+      "topics": [
+        {
+          "id": "xda3k2vxxfommo0kyg1",
+          "name": "ex00",
+          "desc": "",
+          "cards": [
+            {
+              "id": "pou6kyi4cfmmo0n5kg",
+              "term": "What is the reason to create a class with all constructors are private?",
+              "expl": "We dont need to create the class.\nWe only use its static methods.\n\nA static method belongs to the class itself, not to an instance of the class.",
+              "status": "none"
+            },
+            {
+              "id": "1ttw2llpza5mmo0o7mh",
+              "term": "How to call a static method of a class without instancing it?",
+              "expl": "ScalarConverter::convert(\"42\");",
+              "status": "none"
+            },
+            {
+              "id": "rn1rs7o8s2pmmo0q75t",
+              "term": "What is a static method in C++?",
+              "expl": "A static method is a class method that belongs to the class itself, not to any specific object.",
+              "status": "none"
+            },
+            {
+              "id": "6aukp6asffimmo0r307",
+              "term": "How do you call a static method in C++?",
+              "expl": "By using the class name and scope operator ::, without creating an object.\n\n  ClassName::staticMethod();",
+              "status": "none"
+            },
+            {
+              "id": "26d0h1ix7bzmmo0w29u",
+              "term": "What is a literal in C++?",
+              "expl": "A literal is a fixed value written directly in the source code.",
+              "status": "none"
+            },
+            {
+              "id": "83x42blzfhdmmo0wxyd",
+              "term": "Give examples of literals in C++.",
+              "expl": "42      → integer literal\n\n3.14    → floating-point literal\n\n'a'     → character literal\n\n\"hello\" → string literal",
+              "status": "none"
+            },
+            {
+              "id": "umj78pmtldemmo0xdte",
+              "term": "How is a literal different from a variable?",
+              "expl": "A literal is a constant value written in code, while a variable stores a value that can change during execution.",
+              "status": "none"
+            },
+            {
+              "id": "y21jhwn9b7mmom0q02",
+              "term": "What does the static keyword mean for a member function in a C++ class?\n\n    class Math {\n    public:\n        static int add(int a, int b);\n    };\n    \n    Math::add(2, 3);",
+              "expl": "A static member function belongs to the class itself, not to an instance of the class.\nIt can be called without creating an object.",
+              "status": "none"
+            },
+            {
+              "id": "yis2zh042pdmmom1fry",
+              "term": "Why would you use a static member function instead of a normal member function?",
+              "expl": "Use a static member function when the function does not depend on instance data.\nIt acts like a utility function grouped inside the class.\n\n\nExample use cases:\n\n    helper functions\n    converters\n    math utilities\n    factory functions",
+              "status": "none"
+            },
+            {
+              "id": "i5ucu8jrd1ommom2ih6",
+              "term": "Where must the static keyword appear when defining a static member function in C++?",
+              "expl": "static appears only in the class declaration (header), not in the implementation.\n\nHeader:\n\n    class Example {\n    public:\n        static void hello();\n    };\n    \n    \nSource file:\n\n    void Example::hello() {\n    }\n",
+              "status": "none"
+            },
+            {
+              "id": "yrxtwlbi01smmom3400",
+              "term": "How do you call a static member function in C++?",
+              "expl": "You call it using the class name and scope operator.\n\nExample:\n    Logger::print(\"Hello\");",
+              "status": "none"
+            },
+            {
+              "id": "3arc2e9g26bmmom5sjr",
+              "term": "Why is static not written again when implementing a static member function in a .cpp file?",
+              "expl": "Because the function is already declared as static in the class.\n\nThe implementation only needs the scope operator (ClassName::) to link it to the class.",
+              "status": "none"
+            },
+            {
+              "id": "rw1wa9c2fremmomki9y",
+              "term": "What does nan mean in C++?",
+              "expl": "nan = Not a Number. Represents a value that is undefined mathematically.\n\nExample: \n  0.0 / 0.0 → nan (double).",
+              "status": "none"
+            },
+            {
+              "id": "nigm453n31emmoml1ga",
+              "term": "What is the difference between nan and nanf?",
+              "expl": "nan   → double literal\n\nnanf  → float literal (f suffix).",
+              "status": "none"
+            },
+            {
+              "id": "2ybcv39n75tmmomlk26",
+              "term": "What does +inf represent?",
+              "expl": "Positive infinity. \nA value larger than any representable number.\n\nExample: \n  1.0 / 0.0 → +inf",
+              "status": "none"
+            },
+            {
+              "id": "0yoazqgo92dommomm1oz",
+              "term": "What does -inf represent?",
+              "expl": "Negative infinity. \nA value smaller than any representable number.\n\nExample: \n  -1.0 / 0.0 → -inf",
+              "status": "none"
+            },
+            {
+              "id": "s2kl0egujxmmomml15",
+              "term": "What is the difference between +inf and +inff?",
+              "expl": "+inf   → double literal\n\n+inff  → float literal (f suffix)",
+              "status": "none"
+            },
+            {
+              "id": "2bs87g4h6ormmomn0ks",
+              "term": "Why do we need to detect pseudo-literals like nan, +inf, -inf separately?",
+              "expl": "Because converting them to int or char is impossible, and parsing them as numbers can give undefined results.",
+              "status": "none"
+            },
+            {
+              "id": "m32s1v6orymmor6y00",
+              "term": "What is casting in C++?",
+              "expl": "Casting is explicitly converting a value from one type to another.\n\nExample: \n  converting int → float or int → char.",
+              "status": "none"
+            },
+            {
+              "id": "y94vdkkz6hdmmor7fsp",
+              "term": "What does static_cast<Type>(expression) do?",
+              "expl": "Converts expression to Type safely and explicitly.\n\nint x = 42;\nfloat f = static_cast<float>(x); // f == 42.0f",
+              "status": "none"
+            },
+            {
+              "id": "8gociv88v2kmmor97hr",
+              "term": "What does (float)value do? \nHow is it different from static_cast<float>(value)?",
+              "expl": "(float)value is a C-style cast — also converts value to float.\n\nDifferences from static_cast:\n    Works, but less explicit\n    Can perform multiple cast types at once (potentially unsafe)\n    static_cast is preferred in modern C++ and 42 projects",
+              "status": "none"
+            },
+            {
+              "id": "yu0q697rcnsmmowvs0w",
+              "term": "How to change a string to lowercase",
+              "expl": "std::string lower = \"HALLO\";\n\nstd::transform(\n    lower.begin(),\n    lower.end(),\n    lower.begin(),\n    ::tolower\n);",
+              "status": "none"
+            }
+          ]
+        },
+        {
+          "id": "yhkgz7ptguommpads1o",
+          "name": "ex01",
+          "desc": "",
+          "cards": [
+            {
+              "id": "1czx147bm9ymmpafyel",
+              "term": "What is serialization in programming?",
+              "expl": "Serialization is the process of converting data (an object, structure, or pointer) into another format that can be stored, transmitted, or processed.",
+              "status": "none"
+            },
+            {
+              "id": "nxd7zehlpp9mmpagb3e",
+              "term": "What is deserialization?",
+              "expl": "Deserialization is the reverse process of serialization—converting the serialized format back into the original data structure or object.",
+              "status": "none"
+            },
+            {
+              "id": "euw9xi92dtvmmpagxqr",
+              "term": "What does a Serializer class usually do?",
+              "expl": "A Serializer converts data (objects, structures, or pointers) into another representation, often an integer, byte stream, or string.",
+              "status": "none"
+            },
+            {
+              "id": "vdkwd4iltammpal9kp",
+              "term": "What does a Deserializer do?",
+              "expl": "A Deserializer converts serialized data back into the original object, structure, or pointer.",
+              "status": "none"
+            },
+            {
+              "id": "chxt25wdpplmmpaluhz",
+              "term": "In the 42 C++ module exercise, what does serialize(Data* ptr) do?",
+              "expl": "It converts a Data* pointer into an integer type uintptr_t.",
+              "status": "none"
+            },
+            {
+              "id": "zc3q64ld42mmpam6uo",
+              "term": "In the 42 C++ module exercise, what does deserialize(uintptr_t raw) do?",
+              "expl": "It converts the integer uintptr_t back into a Data* pointer.",
+              "status": "none"
+            },
+            {
+              "id": "9wbmb99dgfmmpamvl1",
+              "term": "Why is uintptr_t used for serialization in this exercise?",
+              "expl": "Because uintptr_t is an unsigned integer type guaranteed to be able to store a pointer value safely.",
+              "status": "none"
+            },
+            {
+              "id": "ngri8kj69kmmpanhmd",
+              "term": "What is the main goal of the Serialization exercise at 42?",
+              "expl": "To prove that a pointer can be converted to an integer and back without losing the original memory address.",
+              "status": "none"
+            },
+            {
+              "id": "a5n5f4lwtwommpb865q",
+              "term": "What is reinterpret_cast in C++?",
+              "expl": "reinterpret_cast is a C++ cast used to convert one pointer or integer type into another type without changing the underlying bits.",
+              "status": "none"
+            },
+            {
+              "id": "8ro02u9a9xcmmpbacsu",
+              "term": "Why is reinterpret_cast used in the Serialization exercise?",
+              "expl": "It allows converting a Data* pointer to uintptr_t and back while preserving the exact memory address.",
+              "status": "none"
+            },
+            {
+              "id": "6c835qmnqypmmpbarnu",
+              "term": "What happens internally when using reinterpret_cast on a pointer?",
+              "expl": "The memory address stays the same; only the type interpretation of the value changes.",
+              "status": "none"
+            },
+            {
+              "id": "hvee365mzwbmmpbby1j",
+              "term": "Example of pointer → integer conversion with reinterpret_cast?",
+              "expl": "uintptr_t raw = reinterpret_cast<uintptr_t>(ptr);",
+              "status": "none"
+            },
+            {
+              "id": "ipzzd2bz8qpmmpbc57q",
+              "term": "Example of integer → pointer conversion with reinterpret_cast?",
+              "expl": "Data* ptr = reinterpret_cast<Data*>(raw);",
+              "status": "none"
+            },
+            {
+              "id": "v8ullde4afkmmpbcehn",
+              "term": "Does reinterpret_cast modify the actual data in memory?",
+              "expl": "No. It only changes how the value is interpreted by the compiler.",
+              "status": "none"
+            },
+            {
+              "id": "0s1s9fsqit3cmmpbcqlw",
+              "term": "Why is reinterpret_cast considered dangerous if misused?",
+              "expl": "Because it bypasses type safety and can lead to undefined behavior if the resulting type is not compatible with the actual data.",
+              "status": "none"
+            },
+            {
+              "id": "zzhj2gp1n9kmmpdcbmi",
+              "term": "What is the main idea or purpose of the 42 Serialization exercise (ex01)?",
+              "expl": "To show that a pointer can be converted to an integer (uintptr_t) and back without changing the memory address, teaching how memory addresses, pointers, and reinterpret_cast work in C++.",
+              "status": "none"
+            },
+            {
+              "id": "8cxi0zuqnwtmmpdco09",
+              "term": "Why convert a pointer to an integer in this exercise?",
+              "expl": "To understand that a pointer is just a memory address and can be represented numerically without losing the reference to the object.",
+              "status": "none"
+            },
+            {
+              "id": "dtosxmy15xjmmpdcy98",
+              "term": "What low-level concepts does this exercise teach?",
+              "expl": "Memory addresses, pointer manipulation, type casting (reinterpret_cast), and the idea of serialization.",
+              "status": "none"
+            },
+            {
+              "id": "rwh0fmf4ueimmpddk1s",
+              "term": "Will this serialization copy the object’s data?",
+              "expl": "No. It only converts the pointer itself. The object in memory remains unchanged and accessible through the deserialized pointer.",
+              "status": "none"
+            },
+            {
+              "id": "5z2a49qb755mmpdetwn",
+              "term": "How can pointer-to-integer conversion be useful in low-level programming or systems programming?",
+              "expl": "Sometimes you need to store a pointer in a container that only accepts integers, like certain hash tables or serialization buffers.\n\nCertain network protocols or hardware interfaces require passing raw memory addresses as integers.",
+              "status": "none"
+            }
+          ]
+        },
+        {
+          "id": "q3ong0bfgjmmpfv3sp",
+          "name": "ex02",
+          "desc": "",
+          "cards": [
+            {
+              "id": "deye15drojcmmq6nacc",
+              "term": "What is polymorphism in C++?",
+              "expl": "Polymorphism means a base class pointer or reference can refer to objects of different derived classes, and the correct function behavior is chosen at runtime.",
+              "status": "none"
+            },
+            {
+              "id": "d4rbikjatlbmmq6nlvv",
+              "term": "What enables runtime polymorphism in C++?",
+              "expl": "Virtual functions in a base class.",
+              "status": "none"
+            },
+            {
+              "id": "ma5cchfhgvommq6nr35",
+              "term": "Why must the base class have at least one virtual function for dynamic_cast to work?",
+              "expl": "Because dynamic_cast requires the class to be polymorphic, meaning it must contain at least one virtual function (like a virtual destructor).",
+              "status": "none"
+            },
+            {
+              "id": "6chn5luxlsnmmq6ttk9",
+              "term": "What is dynamic_cast in C++?",
+              "expl": "dynamic_cast is used to safely convert a base class pointer or reference to a derived class type at runtime.",
+              "status": "none"
+            },
+            {
+              "id": "lvq8hasuov9mmq6u5at",
+              "term": "When is dynamic_cast typically used?",
+              "expl": "When you have a base class pointer/reference but need to know the real derived type of the object.",
+              "status": "none"
+            },
+            {
+              "id": "f82gbpa4czqmmq6uj50",
+              "term": "What happens if dynamic_cast fails with pointers?",
+              "expl": "It returns NULL.",
+              "status": "none"
+            },
+            {
+              "id": "ybsskqjcz8mmq6uzcj",
+              "term": "What requirement must a class meet for dynamic_cast to work?",
+              "expl": "The class must be polymorphic, meaning it must have at least one virtual function.",
+              "status": "none"
+            },
+            {
+              "id": "4irw8583lummmq6v9qg",
+              "term": "Why does the Base class in this exercise have a virtual destructor?",
+              "expl": "To make the class polymorphic, which allows dynamic_cast to work.",
+              "status": "none"
+            },
+            {
+              "id": "zo3e6lvvv7mmq6z4pt",
+              "term": "How does dynamic_cast behave differently for pointers vs references?",
+              "expl": "Pointer cast:   returns NULL if the cast fails\n\nReference cast: throws a std::bad_cast exception",
+              "status": "none"
+            },
+            {
+              "id": "mopiuqowlylmmq6zpi0",
+              "term": "How do you check the real type using dynamic_cast with references?",
+              "expl": "By attempting the cast inside a try / catch block and catching std::bad_cast if it fails.\n\n    try\n    {\n        A& a = dynamic_cast<A&>(p);\n    }\n    catch (std::bad_cast&)\n    {\n    }\n    ",
+              "status": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "FlashLearn",
+    "schema": 1
+  },
+  "settings": {
+    "proStatus": 5,
+    "theme": "dark"
+  }
+}
